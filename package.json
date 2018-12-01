@@ -7,6 +7,7 @@
     "body-parser": "^1.0.2",
     "cloudinary": "^1.0.9",
     "connect-multiparty": "^1.0.3",
+    "cors": "^2.8.5",
     "express": "^4.1.1",
     "express3-handlebars": "^0.5.0",
     "jquery": "^3.3.1",

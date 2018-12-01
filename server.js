@@ -3,6 +3,7 @@ var cors = require('cors')
 const cloudinary = require('cloudinary');
 const bodyParser = require('body-parser')();
 const fileParser = require('connect-multiparty')();
+const cors = require('cors');
 const path = require("path");
 const multer = require("multer");
 const upload = multer();
@@ -32,6 +33,13 @@ app.use(express.static(__dirname + '/public'));
  * Middleware
  */
 app.use( bodyParser );
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 /**
  * Index page
