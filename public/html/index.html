@@ -15,29 +15,21 @@
     <nav class="navbar navbar-default navbar-fixed-top" style="opacity:.85; position:-webkit-sticky;">
       <div class="container-fluid" style="position:sticky;">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#" style="font-size:40px;">OraNotes</a>
+          <a class="navbar-brand" href="dashboard" style="font-size:40px;">OraNotes</a>
         </div>
         <ul class="nav navbar-nav">
-          <li><a href="index" class="btn">New </a></li>
+          <li><a href="note" class="btn">New </a></li>
           <li><a href="#" id="btnSave" class = "btn ">save</a></li>
           <li><a href="#" id="btnStart" class = "btn navbar-right">Start</a></li>
           <li><a href="#" id="btnStop" class = "btn navbar-right">Stop</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="dashboard" class="btn">Dashboard </a></li>
         </ul>
       </div>
     </nav>
     <!-- /Nav bar -->
   </div>
-
-  <!-- Upload form -->
-  <br><br>
-  <form action="/upload" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-    choose a file: <input type='file' name='image' />
-    <button type='submit'>Upload</button>
-  </form>
-  
-
-  
-  <!-- /Upload form -->
 
   <!-- Main content area -->
   <br>

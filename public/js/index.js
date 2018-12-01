@@ -4,7 +4,7 @@
   recognition.interimResults = true;
   recognition.lang = 'en-US';
 
-  let p = document.createElement('span');
+  let p = document.createElement('p');
   const words = document.querySelector('.words');
   words.appendChild(p);
 
@@ -19,7 +19,7 @@
 
 
       if (e.results[0].isFinal) {
-        p = document.createElement('span');
+        p = document.createElement('p');
         words.appendChild(p);
       }
   });
