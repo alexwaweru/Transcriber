@@ -1,4 +1,5 @@
 const express    = require('express');
+var cors = require('cors')
 const cloudinary = require('cloudinary');
 const bodyParser = require('body-parser')();
 const fileParser = require('connect-multiparty')();
@@ -6,7 +7,7 @@ const path = require("path");
 const multer = require("multer");
 const upload = multer();
 const credentials = require("./credentials");
-const port = Number(process.env.PORT || 5000);
+const port = Number(process.env.PORT || 8000);
 var fs = require("fs");
 
 
@@ -15,6 +16,14 @@ cloudinary.config({
   api_key:    credentials.api_key,
   api_secret: credentials.api_secret
 });
+
+var corsOptions = 
+{
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: true,
+  optionsSuccessStatus: 200
+}
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
@@ -28,11 +37,15 @@ app.use( bodyParser );
  * Index page
  */
 
-app.get('/',function(req,res){
+app.get('/',cors(corsOptions),function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/signup.html'));
 });
 
 app.get('/dashboard',function(req,res){
+  res.sendFile(path.join(__dirname+'/public/html/dashboard.html'));
+});
+
+app.post('/dashboard',function(req,res){
   res.sendFile(path.join(__dirname+'/public/html/dashboard.html'));
 });
 
@@ -45,6 +58,14 @@ app.get('/note',function(req,res){
 });
 
 
+// 404
+app.use(express.static(path.join(__dirname, 'public/html/404.html')));
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
 
 app.post('/upload', fileParser, function(req, res){
   console.log(req);
@@ -75,10 +96,10 @@ app.post('/upload', fileParser, function(req, res){
 });
 
 // 404
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname+'/public/html/404.html'));
-  // res.status(404).send("Sorry can't find that!")
-});
+// app.use((req, res, next) => {
+//   res.sendFile(path.join(__dirname+'/public/html/404.html'));
+//   // res.status(404).send("Sorry can't find that!")
+// });
 
 // 500
 app.use((err, req, res, next) => {
@@ -87,5 +108,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-  console.log(`App running at http://localhost:5000`)
+  console.log(`App running at http://localhost:8000`)
 });
