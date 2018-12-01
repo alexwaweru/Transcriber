@@ -46,17 +46,17 @@ app.get('/note',function(req,res){
 
 
 
-app.post('/upload', upload.any(), function(req, res){
+app.post('/upload', fileParser, function(req, res){
   console.log(req);
-  var imageFile = req.files.image;  //TOD: Get file to send from client side
-  var filename = imageFile.name;
-  
-  cloudinary.uploader.upload(imageFile.path, function(result){
+  var file = req.files.image;  //TOD: Get file to send from client side
+  var filename= file.originalFilename;
+
+  cloudinary.uploader.upload(file.path, function(result){
     if (result.url) {
       /*
        * TODO: save url to database to and display later.
        */
-      
+      //res.send({url: result.url}); //Save this url to a database instead of outputing it
       res.json(200, {url: result.url});
     } else {
       /*
