@@ -84,11 +84,13 @@ app.post('/upload', fileParser, function(req, res) {
                 console.error("Error occured " + err);
             });
 
+            res.sendFile(path.join(__dirname, '/public/html/dashboard.html'));
+
             //res.send({url: result.url}); //Save this url to a database instead of outputing it
-            res.status(200).json({
-                message: "File uploaded successfully",
-                url: result.url
-            });
+            // res.status(200).json({
+            //     message: "File uploaded successfully",
+            //     url: result.url
+            // });
 
         } else {
             /*

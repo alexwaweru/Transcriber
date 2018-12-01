@@ -95,10 +95,7 @@
                                 </div>
                                 <div class="btn-box-row row-fluid">
                                     <div id="docs" class="span12">
-                                        <!-- Documemnts go here... -->
-                                        <!-- <a href="#" class="btn-box small span3">
-                                                    <img src="../img/word.png" alt="word doc icon"><b>bankstatements.doc</b>
-                                            </a> -->
+                                        <!-- Documents go here... -->
                                     </div>
                                 </div>
                             </div>
@@ -139,9 +136,9 @@
                         div2.classList.add("span12");
                         div1.appendChild(div2);
 
-                        for (var i = 0; i < data.length + 1; i++) {
+                        for (var i = 0; i < data.length; i++) {
 
-                            if (i % 5 != 0) {
+                            if (i % 4 != 0) {
 
                                 let a = document.createElement('a');
                                 let img = document.createElement('img');
@@ -157,13 +154,8 @@
 
                                 div2.appendChild(a);
 
-                                console.log(div2);
-                                // console.log(img);
-                                console.log("Hello");
-
                             } else {
                                 let docs = document.getElementById('docs');
-                                // let docs = document.getElementById('docs');
                                 let div1 = document.createElement('div');
                                 div1.classList.add("row-fluid");
                                 docs.appendChild(div1);
