@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>OraNotes</title>
+    <meta charset="UTF-8">
+    <title>OraNotes</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>Oranotes</title>
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/upload.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Oranotes</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/upload.css">
 </head>
-<body>
-  <div class="row">
-    <!-- Nav bar -->
-    <nav class="navbar navbar-default navbar-fixed-top" style="opacity:.85; position:-webkit-sticky;">
-      <div class="container-fluid" style="position:sticky;">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="dashboard" style="font-size:40px;">OraNotes</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="note" class="btn">New </a></li>
-          <li><a href="#" id="btnSave" class = "btn ">save</a></li>
-          <li><a href="#" id="btnStart" class = "btn navbar-right">Start</a></li>
-          <li><a href="#" id="btnStop" class = "btn navbar-right">Stop</a></li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-            <li><a href="dashboard" class="btn">Dashboard </a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- /Nav bar -->
-  </div>
 
-  <!-- Main content area -->
-  <br>
-  <div id="text" class="words" contenteditable>
-  </div>
-  <!-- /Main conent area -->
+<body>
+    <div class="row">
+        <!-- Nav bar -->
+        <nav class="navbar navbar-default navbar-fixed-top" style="opacity:.85; position:-webkit-sticky;">
+            <div class="container-fluid" style="position:sticky;">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="dashboard" style="font-size:40px;">OraNotes</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="note" class="btn">New </a></li>
+                    <li><a href="#" id="btnSave" class="btn ">save</a></li>
+                    <li><a href="#" id="btnStart" class="btn navbar-right">Start</a></li>
+                    <li><a href="#" id="btnStop" class="btn navbar-right">Stop</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="dashboard" class="btn">Dashboard </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Nav bar -->
+    </div>
+
+    <!-- Main content area -->
+    <br>
+    <div id="text" class="words" contenteditable>
+    </div>
+    <!-- /Main conent area -->
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!-- DOCX script -->
-  <script src="https://unpkg.com/docx@4.0.0/build/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
-  
-  <!-- custom js script -->
-  <script src="../js/index.js"></script>
+    <!-- DOCX script -->
+    <script src="https://unpkg.com/docx@4.0.0/build/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+
+    <!-- custom js script -->
+    <script src="../js/index.js"></script>
 </body>
+
 </html>
