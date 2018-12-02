@@ -1,12 +1,12 @@
 (function() {
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyA4GhAo7P1s_U0RAFuV19wHCVjZ09WQOIs",
-        authDomain: "audio-39f98.firebaseapp.com",
-        databaseURL: "https://audio-39f98.firebaseio.com",
-        projectId: "audio-39f98",
-        storageBucket: "audio-39f98.appspot.com",
-        messagingSenderId: "981576778175"
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: ""
     };
     firebase.initializeApp(config);
 

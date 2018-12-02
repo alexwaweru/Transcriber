@@ -2,9 +2,9 @@
 /* 
  * Cloudinary credentials */
 var cloudinaryCredentials = {
-    cloud_name: 'dr6txuagq',
-    api_key:    '444457375614569',
-    api_secret: 'JaanLrlNtlbfeRclr9ObBLlrzUc'
+    cloud_name: 'you\'re snooping around my credentials',
+    api_key:    '3.1415926535897932384626',
+    api_secret: 'My name is Alex Waweru'
   };
 
   module.exports = cloudinaryCredentials;
